@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Parent Component(Home-Component)</h2>
+        </div>
+        <div class="col-md-12">
+            <ul>
+                <li *ngFor="let item of items">{{item}}</li>
+              </ul>
+        </div>
+    </div>
+</div>
+<hr>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h3>Child Component(Test-component)</h3>
+        </div>
+        <div class="col-md-12">
+            <app-test [item]="currentItem"  (newItemEvent)="addItem($event)"></app-test>
+        </div>
+    </div>
+</div>
