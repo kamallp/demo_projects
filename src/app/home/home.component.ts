@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
 
   constructor() { }
-  currentItem = 'Television';
+  currentItem = ['itemTV', 'itemWM', 'itemG', 'itemR'];
   items = ['item1', 'item2', 'item3', 'item4'];
 
   addItem(newItem: string) {
