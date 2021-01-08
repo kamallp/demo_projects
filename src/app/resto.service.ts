@@ -6,28 +6,28 @@ import { HttpClient} from '@angular/common/http';
 })
 export class RestoService {
 
-  url="http://localhost:3000/restaurants";
-  regUrl="http://localhost:3000/users";
+  // url="http://localhost:3000/restaurants";
+  // regUrl="http://localhost:3000/users";
   constructor(private http:HttpClient) { }
 
   getList()
   {
-    return this.http.get(this.url);
+    return this.http.get('/api/restaurants');
   }
   saveResto(data)
   {
-    return this.http.post(this.url, data)
+    return this.http.post('/api/restaurants', data)
   }
   deleteResto(id){
-    return this.http.delete(`${this.url}/${id}`)
+    return this.http.delete(`${'/api/restaurants'}/${id}`)
   }
    getCurrentResto(id){
-    return this.http.get(`${this.url}/${id}`)
+    return this.http.get(`${'/api/restaurants'}/${id}`)
   }
   updateResto(id, data){
-    return this.http.put(`${this.url}/${id}`, data)
+    return this.http.put(`${'/api/restaurants'}/${id}`, data)
   }
   createUser(data){
-    return this.http.post(this.regUrl,  data)
+    return this.http.post('/api/users',  data)
   }
 }

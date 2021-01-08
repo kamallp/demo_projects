@@ -41,7 +41,7 @@ export class RegisterComponent implements OnInit {
         if (this.registerForm.invalid) {
             return;
         }
-
+        console.log(this.registerForm.get('firstName').value);
         this.resto.createUser(this.registerForm.value).subscribe((result)=>{
           this.alert = true;
         })
