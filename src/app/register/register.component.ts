@@ -22,6 +22,15 @@ export class RegisterComponent implements OnInit {
             firstName: ['', Validators.required],
             lastName: ['', Validators.required],
             email: ['', [Validators.required, Validators.email]],
+
+            address: this.formBuilder.group({
+                address1: ['', Validators.required],
+                address2: ['', Validators.required],
+                state: ['', Validators.required],
+                pincode: ['', Validators.required]
+            }),
+
+            dob: ['', Validators.required],
             password: ['', [Validators.required, Validators.minLength(6)]],
             confirmPassword: ['', Validators.required],
             acceptTerms: [false, Validators.requiredTrue]
@@ -31,8 +40,13 @@ export class RegisterComponent implements OnInit {
     }
 
     // convenience getter for easy access to form fields
-    get f() { return this.registerForm.controls; }
-
+    get f() { 
+        return this.registerForm.controls; 
+    }
+   
+    // get addr() { 
+    //     return this.registerForm.controls; 
+    // }
     onSubmit() {
         this.submitted = true;
 
@@ -40,7 +54,8 @@ export class RegisterComponent implements OnInit {
         if (this.registerForm.invalid) {
             return;
         }
-
+        //  console.log(this.registerForm.get('firstName').value);
+        //  console.log(this.registerForm.value);
         this.resto.createUser(this.registerForm.value).subscribe((result)=>{
           this.alert = true;
         })
@@ -54,6 +69,4 @@ export class RegisterComponent implements OnInit {
     closeAlert(){
       this.alert = false;
     }
-  
-  
 }
