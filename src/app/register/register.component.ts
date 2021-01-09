@@ -69,7 +69,4 @@ export class RegisterComponent implements OnInit {
     closeAlert(){
       this.alert = false;
     }
-  
-    
-  
 }
