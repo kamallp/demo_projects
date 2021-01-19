@@ -6,6 +6,7 @@ import {ListRestoComponent} from './list-resto/list-resto.component';
 import {LoginComponent} from './login/login.component';
 import {RegisterComponent} from './register/register.component';
 import { HomeComponent } from './home/home.component';
+import { ViewuserComponent } from './viewuser/viewuser.component';
 
 const routes: Routes = [
   {
@@ -27,6 +28,10 @@ const routes: Routes = [
   {
     component:ListRestoComponent,
     path:'list'
+  },
+  {
+    component:ViewuserComponent,
+    path:'viewuser'
   },
   {
     component:HomeComponent,

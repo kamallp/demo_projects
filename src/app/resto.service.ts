@@ -30,4 +30,8 @@ export class RestoService {
   createUser(data){
     return this.http.post('/api/users',  data)
   }
+  getUsers()
+  {
+    return this.http.get('/api/users');
+  }
 }

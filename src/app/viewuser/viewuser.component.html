@@ -1,0 +1,22 @@
+
+<table datatable  class="table row-border hover" *ngIf="this.temp" [dtOptions]="dtOptions">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Eamil</th>
+        <th scope="col">Address</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor = "let user of userList">
+        <th>{{user.id}}</th>
+        <td>{{user.title + " " + user.firstName + " " + user.lastName}}</td>
+        <td>{{user.email}}</td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+

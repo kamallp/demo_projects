@@ -13,6 +13,7 @@ import {ReactiveFormsModule} from '@angular/forms';
 import { DataTablesModule } from 'angular-datatables';
 import { HomeComponent } from './home/home.component';
 import { TestComponent } from './home/test/test.component';
+import { ViewuserComponent } from './viewuser/viewuser.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { TestComponent } from './home/test/test.component';
     LoginComponent,
     RegisterComponent,
     HomeComponent,
-    TestComponent
+    TestComponent,
+    ViewuserComponent
     
   ],
   imports: [
